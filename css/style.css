@@ -1,0 +1,70 @@
+
+/*.background, .background .pane, .background .item, .background .item-complex .item-content {
+    background-color: yellow;
+}
+/* header */
+.bar.bar-stable {
+    background-color: #7379a3;
+    color: #f4f4f4;
+}
+
+    .bar.bar-stable .title {
+        background-color: #7379a3;
+        color: #f4f4f4;
+    }
+
+
+/*.scroll-content{
+    background: url("../img/logo.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
+*/
+
+.loading-spinner {
+    text-align: center;
+}
+
+.spinner svg {
+    width: 19% !important;
+    height: 85px !important;
+    margin-top: 200px !important;
+}
+
+.spinner.spinner-assertive {
+    stroke: #ef473a;
+    fill: #ef473a;
+}
+
+.spinner.spinner-assertive {
+    stroke: #3A73EF;
+    fill: #3A3CEF;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-weight {
+    font-weight: 700 !important;
+}
+
+.rideTitle {
+    font-weight: 700 !important;
+    text-align: center;
+}
+
+.custom-person-icon {
+  font-size: 25px;
+  color : blue;
+}
+.custom-location-icon-red {
+  font-size: 25px;
+  color : red;
+}
+.custom-location-icon-green{
+  font-size: 25px;
+  color : green;
+}

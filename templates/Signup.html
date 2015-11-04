@@ -1,0 +1,65 @@
+<!--<ion-view view-title="Signup">
+    <ion-content>
+        <form name="myForm">
+            <label class="item item-input">
+                <input name="name" ng-model="user.name" type="text" placeholder="Your name" required />
+            </label>
+            <label ng-show="myForm.name.$error.required">
+                Required!
+            </label>
+            <label class="item item-input">
+                <input name="email" ng-model="user.email" type="email" placeholder="Enter email" required />
+            </label>
+            <label ng-show="myForm.email.$dirty && myForm.email.$invalid && !myForm.email.$error.email">Email Required</label>
+            <label ng-show="myForm.email.$error.email" class="help-inline">Email is not valid</label>
+            <label class="item item-input">
+                <input ng-model="user.mobile" type="tel" placeholder="phone Number" />
+            </label>
+
+            <label class="item item-input">
+                <input ng-model="user.password" type="password" placeholder="Password" />
+            </label>
+            <label class="item">
+                <button class="button button-block button-positive" type="button" ng-click="saveUser(user)">Register</button>
+            </label>
+        </form>
+    </ion-content>
+</ion-view>-->
+
+
+
+<ion-view view-title="Signup">
+    <ion-content>
+        <form name="myForm">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label font-weight">Name</span>
+                    <input name="name" ng-model="user.name" type="text" placeholder="Name" required/>
+                </label>
+                <label ng-show="myForm.name.$error.required">
+                    Required!
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label font-weight">Email</span>
+                    <input name="email" ng-model="user.email" type="email" placeholder="Email" required />
+                </label>
+                <label ng-show="myForm.email.$dirty && myForm.email.$invalid && !myForm.email.$error.email">Email Required</label>
+                <label ng-show="myForm.email.$error.email" class="help-inline">Email is not valid</label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label font-weight">Mobile Number</span>
+                    <input ng-model="user.mobile" type="tel" placeholder="Mobile Number" />
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label font-weight">Password</span>
+                    <input ng-model="user.password" type="password" placeholder="Password" />
+                </label>
+                <label class="item">
+                    <button class="button button-block button-assertive" type="submit" ng-click="saveUser(user)" ng-disabled="myForm.name.$dirty && myForm.name.$invalid ||
+myForm.email.$dirty && myForm.email.$invalid">
+                        Register
+                    </button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

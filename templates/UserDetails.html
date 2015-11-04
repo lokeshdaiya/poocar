@@ -1,0 +1,36 @@
+<ion-view view-title="UserDetails">
+    <ion-content>
+        <div ng-hide="UserDetails" class="loading-spinner"><ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner></div>
+        <ion-list ng-show="UserDetails">
+            <ion-item>
+                <div class="item bar bar-header bar-assertive">
+                    <a class="rideTitle title">
+                        Details for Selected User
+                    </a>
+                </div>
+                <div class="item item-divider">
+                    <h2 class="font-weight">Name : </h2>
+                    <!--<h4>{{UserDetails.name}}</h4>-->
+                    <!--<div contenteditable="true">{{UserDetails.name}}</div>-->
+                    <input name="UserDetails.name" ng-model="UserDetails.name">
+                    
+                </div>
+                <div class="item item-divider">
+                    <h2 class="font-weight">Email : </h2>
+                    <!--<h4>{{UserDetails.email}}</h4>-->
+                    <!--<div contenteditable="true">{{UserDetails.email}}</div>-->
+                    <input name="UserDetails.email" ng-model="UserDetails.email">
+                </div>
+                <div class="item item-divider">
+                    <h2 class="font-weight">Mobile : </h2>
+                    <!--<h4>{{UserDetails.mobile}}</h4>-->
+                    <!--<div contenteditable="true">{{UserDetails.mobile}}</div>-->
+                    <input name="UserDetails.mobile" ng-model="UserDetails.mobile">
+                </div>
+                <div class="item item-divider">
+                    <button class="button button-small icon-left" type="button" ng-click="UpdateUserDetails(UserDetails)">Update Details</button>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

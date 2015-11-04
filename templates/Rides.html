@@ -1,0 +1,18 @@
+<ion-view view-title="Rides">
+    <ion-content>
+        <div ng-hide="rides" class="loading-spinner"><ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner></div>
+        <ion-list ng-show="rides">
+            <ion-item ng-repeat="ride in rides" ng-href="#/app/Rides/{{ride.rideid}}">
+                        <h2><i class="icon ion-ios-location placeholder-icon custom-location-icon-green"></i> {{ride.Origin}}</h2>
+                    
+                    
+						<h2><i class="icon ion-ios-location placeholder-icon custom-location-icon-red"></i> {{ride.Destination}}</h2>
+                    
+                    
+                        <h2><i class="icon ion-ios-contact custom-person-icon" ng-repeat="i in ride.NumberofSeats|range"></i></h2>
+						<!-- <p><i class="icon ion-ios-contact" ng-repeat="n in [].constructor(3) track by $index"></i></p> -->
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

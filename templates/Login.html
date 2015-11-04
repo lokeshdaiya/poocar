@@ -1,0 +1,37 @@
+<!--<ion-view view-title="Login">
+    <ion-content>
+        <form>
+            <div class="list">
+                <label class="item item-input">
+                    <input type="text" ng-model="loginData.email" placeholder="Email Address" required>
+                </label>
+                <label class="item item-input">
+                    <input type="password" ng-model="loginData.password" placeholder="Password" required>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit" ng-click="login(loginData)">Login</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>-->
+
+<ion-view view-title="Login">
+    <ion-content>
+        <form>
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label font-weight">Email Address</span>
+                    <input type="email" ng-model="loginData.email" placeholder="Email Address" required >
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label font-weight">Password</span>
+                    <input type="password" ng-model="loginData.password" placeholder="Password" required>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-assertive" type="submit" ng-click="login(loginData)">Login</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

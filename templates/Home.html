@@ -1,0 +1,60 @@
+<ion-view view-title="Home">
+    <ion-content>
+        <h1>Home Page</h1>
+
+        <a ng-href="whatsapp://send?text=Its test message" class="item">
+            Send Message to a Contact Via WhatsApp.
+        </a>
+        <a href="whatsapp://send?text=Its test message" class="item">
+            Send Message to a Contact Via WhatsApp.
+        </a>
+        <a class="item" href="#" onclick="window.open('http://pacificinfraworld.com', '_blank', 'location=no','closebuttoncaption=Return'); return false;">
+                Open a Browser
+            </a>     
+        <a class="item" href="#" onclick="window.open('http://pacificinfraworld.com', '_system', 'location=no','closebuttoncaption=Return'); return false;">
+                Open a Browser
+            </a>     
+     
+        <a class="item" href="#" onclick="window.open('http://pacificinfraworld.com', '_blank', 'location=yes','closebuttoncaption=Return'); return false;">
+                Open a Browser
+            </a>     
+        <a class="item" href="#" onclick="window.open('http://pacificinfraworld.com', '_system', 'location=yes','closebuttoncaption=Return'); return false;">
+                Open a Browser
+            </a>     
+
+           <a class="item" href="#" onclick="window.open('http://pacificinfraworld.com', '_self', 'location=yes','closebuttoncaption=Return'); return false;">
+                Open a Browser
+            </a>     
+        <a class="item" href="#" onclick="window.open('http://pacificinfraworld.com', '_self', 'location=no','closebuttoncaption=Return'); return false;">
+                Open a Browser
+            </a>     
+
+
+        <a ng-href="tel:7758846988" class="item">Call 7758846988</a>
+        EMAIl:{{globals.currentUser.email}}
+
+        <a href="tel:7758846988" class="item"> Call me now </a>
+        <a href="http://pacificinfraworld.com" class="item">External Url</a>
+        <a href="geo:0,0?q=atm" class="item"> search Atm </a>
+        <a ng-href="geo:0,0?q=atm" class="item"> search Atm </a>
+        <p class="padding">Enter a Phone Number To Call</p>
+
+        <button class="button button-block" ng-click="addNotification()">Add Notification</button>
+        <button class="button button-block" ng-click="add()">Add Local Notification</button>
+
+        <button class="button" ng-click="add()">Add notification</button>
+        <button class="button" ng-click="isScheduled()">Is Scheduled</button>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Phone # :</span>
+                <input type="tel" ng-model="data.phoneNumber">
+            </label>
+            <a class="item" ng-href="tel:{{data.phoneNumber}}" ng-if="data.phoneNumber">
+                Call {{data.phoneNumber}} with Prompt
+            </a>
+            <div class="item" ng-click="dialNumber(data.phoneNumber)" ng-if="data.phoneNumber">
+                Call {{data.phoneNumber}} without Prompt
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

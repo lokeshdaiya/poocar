@@ -1,0 +1,83 @@
+<ion-view view-title="Post Ride">
+    <ion-content>
+        <form name="postRide">
+            <label class="item item-input">
+                <h2><i class="icon ion-ios-location placeholder-icon custom-location-icon-green"></i></h2>
+                <input ng-autocomplete name="Origin" ng-model="ride.Origin" type="text" placeholder="Origin" id="FromLoc" required ng-focus="disableTap($event)" />
+                <!--<input name="Origin" ng-model="ride.Origin" type="text" placeholder="Origin" id="FromLoc" required ng-focus="geolocate($event)" />-->
+            </label>
+            <label ng-show="postRide.Origin.$error.required">
+                Required!
+            </label>
+            <label class="item item-input">
+                <h2><i class="icon ion-ios-location placeholder-icon custom-location-icon-red"></i></h2>
+                <input ng-autocomplete name="Destination" ng-model="ride.Destination" type="text" placeholder="Destination" id="ToLoc" required ng-focus="disableTap($event)" />
+                <!--<input name="destination" ng-model="ride.destination" type="text" placeholder="destination" id="toloc" required ng-focus="geolocate($event)"/>-->
+            </label>
+            <label ng-show="postRide.Destination.$error.required">
+                Required!
+            </label>
+            <label class="item item-input">
+                <input ng-model="ride.DateofJourney" placeholder="Departure Date" type="date" id="ddate">
+            </label>
+            <label class="item item-input">
+                <input ng-model="ride.Timeofjourney" placeholder="Departure time" type="time" id="Dtime">
+            </label>
+            <label class="item range">
+				
+				  <!-- <i class="icon ion-ios-contact"></i> -->
+				  <input ng-model="ride.NumberofSeats" placeholder="Number of seats" type="range" id="NoSeat" max="11" min="1" ng-bind="noride">
+				  <p class="item">{{ride.NumberofSeats}}</p>
+				
+                <!-- <input ng-model="ride.NumberofSeats" placeholder="Number of seats" type="range" id="NoSeat"> -->
+            </label>
+			
+				<h2><i class="icon ion-ios-contact custom-person-icon" ng-repeat="i in ride.NumberofSeats|range"></i></h2>
+            
+			
+            <label class="item">
+                <button class="button button-block button-assertive" type="button" ng-click="saveRide(ride)">Post Ride</button>
+            </label>
+        </form>
+    </ion-content>
+</ion-view>
+
+<!--<ion-view view-title="Post Ride">
+    <ion-content>
+        <form name="postRide">
+            <div class="list">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Origin</span>
+                    <i class="icon ion-ios-location placeholder-icon"></i>
+                    <input vs-google-autocomplete name="Origin" ng-model="ride.Origin" type="text" placeholder="Origin" id="FromLoc" required />
+                </label>
+                <label ng-show="postRide.Origin.$error.required">
+                    Required!
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Destination</span>
+                    <i class="icon ion-ios-location placeholder-icon"></i>
+                    <input vs-google-autocomplete name="Destination" ng-model="ride.Destination" type="text" placeholder="Destination" id="ToLoc" required />
+                </label>
+                <label ng-show="postRide.Destination.$error.required">
+                    Required!
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Departure Date</span>
+                    <input ng-model="ride.DateofJourney" placeholder="Departure Date" type="date" id="ddate">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Departure Time</span>
+                    <input ng-model="ride.Timeofjourney" placeholder="Departure time" type="time" id="Dtime">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Number of Seats</span>
+                    <input ng-model="ride.NumberofSeats" placeholder="Number of seats" type="number" id="NoSeat">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="button" ng-click="saveRide(ride)">Post Ride</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>-->
