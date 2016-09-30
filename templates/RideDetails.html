@@ -2,9 +2,9 @@
     <ion-content>
         <div ng-hide="RideDetails" class="loading-spinner"><ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner></div>
         <ion-list ng-show="RideDetails">
-            <ion-item>
-                <div class="item bar bar-header bar-assertive">
-                    <a class="rideTitle title">
+            <ion-item class="card">
+                <div class="item bar bar-header">
+                    <a class="title">
                         Details for Selected Ride
                     </a>
                 </div>
@@ -26,7 +26,6 @@
                 <div class="item item-divider">
                     <a ng-href="tel:{{RideDetails.mobile}}" class="button button-small icon-left ion-ios-telephone">Call</a>
                     <a ng-href="mailto:{{RideDetails.email}}" class="button button-small icon-left ion-email">Email</a>
-					<ion-toggle ng-model="ridestatus" toggle-class="toggle-calm">Enable/Disable Ride</ion-toggle>
                 </div>
             </ion-item>
         </ion-list>

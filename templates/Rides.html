@@ -2,7 +2,7 @@
     <ion-content>
         <div ng-hide="rides" class="loading-spinner"><ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner></div>
         <ion-list ng-show="rides">
-            <ion-item ng-repeat="ride in rides" ng-href="#/app/Rides/{{ride.rideid}}">
+            <ion-item class="card" ng-repeat="ride in rides" ng-href="#/app/Rides/{{ride.rideid}}">
                         <h2><i class="icon ion-ios-location placeholder-icon custom-location-icon-green"></i> {{ride.Origin}}</h2>
                     
                     
