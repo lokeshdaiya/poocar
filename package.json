@@ -1,0 +1,23 @@
+{
+  "name": "@loksa/poocar",
+  "version": "1.0.0",
+  "description": "Car pooling app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokeshdaiya/poocar.git"
+  },
+  "keywords": [
+    "poocar",
+    "angularjs"
+  ],
+  "author": "Lokesh Daiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lokeshdaiya/poocar/issues"
+  },
+  "homepage": "https://github.com/lokeshdaiya/poocar#readme"
+}
