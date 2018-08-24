@@ -2,7 +2,7 @@
   "name": "@loksa/poocar",
   "version": "1.0.0",
   "description": "Car pooling app",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
